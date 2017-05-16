@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace TestDrive.Views
 {
@@ -37,7 +39,8 @@ namespace TestDrive.Views
 
 	public partial class CarList : ContentPage
 	{
-		public List<Veiculo> Veiculos { get; set; }
+
+        public List<Veiculo> Veiculos { get; set; }
 
         public CarList()
 		{
@@ -61,6 +64,34 @@ namespace TestDrive.Views
 			};
 
 			this.BindingContext = this;
+		}
+
+        private async void getJson(){
+			{
+				var httpRequest = new HttpClient();
+				var stream = await httpRequest.GetStringAsync("https://openweathermap.org/data/2.5/weather?id=3448439&appid=b1b15e88fa797225412429c1c50c122a1");
+
+                var json = JsonConvert.DeserializeObject(stream);
+                System.Diagnostics.Debug.WriteLine(json);
+                //foreach (var item in carrosDes)
+				//{
+				//	Produto produto = new Produto()
+				//	{
+				//		Id = int.Parse(item.Attribute("id").Value),
+				//		Descricao = item.Element("descricao").Value,
+				//		Categoria = item.Element("categoria").Value,
+				//		Quantidade = int.Parse(item.Element("quantidade").Value),
+				//		Preco = decimal.Parse(item.Element("precounitario").Value)
+				//	};
+				//	produtos.Add(produto);
+				//}
+				//lstProduto.ItemsSource = produtos;
+			}
+        }
+
+		void TestClick(object sender, System.EventArgs e)
+		{
+            this.getJson();
 		}
 
 		private void listViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)

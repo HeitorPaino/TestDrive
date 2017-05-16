@@ -18,3 +18,5 @@
 /Users/heitorpaino/Projects/TestDrive/TestDrive/bin/Debug/Xamarin.Forms.Xaml.xml
 /Users/heitorpaino/Projects/TestDrive/TestDrive/obj/Debug/TestDrive.dll
 /Users/heitorpaino/Projects/TestDrive/TestDrive/obj/Debug/TestDrive.pdb
+/Users/heitorpaino/Projects/TestDrive/TestDrive/bin/Debug/Newtonsoft.Json.dll
+/Users/heitorpaino/Projects/TestDrive/TestDrive/bin/Debug/Newtonsoft.Json.xml
