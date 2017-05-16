@@ -20,6 +20,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-      <Button x:Name="buttonTeste" Text="Testing" Clicked="TestClick" VerticalOptions="End"></Button> 
     </StackLayout>
 </ContentPage>
