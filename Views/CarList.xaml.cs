@@ -37,6 +37,13 @@ namespace TestDrive.Views
 		}
 	}
 
+    public class Weather{
+        public string temp { get; set; }
+        public string imgurl { get; set; } = "http://openweathermap.org/img/w/";
+
+    }
+
+
 	public partial class CarList : ContentPage
 	{
 
